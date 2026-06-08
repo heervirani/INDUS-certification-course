@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function whole(){
+            var a=myfrm.txt1.value
+            var b=myfrm.txt2.value
+            var choice=myfrm.txt3.value    
+            if(choice=="+"){
+                var c=parseInt(a) + parseInt(b)
+            myfrm.ans.value="Sum is" +c
+            }
+              else if(choice=="-"){
+                var c=parseInt(a) - parseInt(b)
+            myfrm.ans.value="Sub is" +c
+            } 
+              else if(choice=="*"){
+                var c=parseInt(a) * parseInt(b)
+            myfrm.ans.value="multi is" +c
+            } 
+               else if(choice=="/"){
+                var c=parseInt(a) / parseInt(b)
+            myfrm.ans.value="div is" +c
+            } 
+        }
+        </script>
+</head>
+<body>
+    <form id="myfrm">
+        no1:<input type="text" name="txt1" /> <br />
+        no2:<input type="text" name="txt2" /> <br />
+        <select name="txt3"> 
+            <option> + </option>
+            <option> - </option>
+            <option> * </option>      
+            <option> / </option>      
+    <input type="button" onclick="whole()" value="Get answer" />
+    <input type="text" name="ans" readonly disabled />
+    </form>  
+</body>
+</html>
